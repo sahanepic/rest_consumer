@@ -1,4 +1,4 @@
-package com.sahanbcs.models;
+package com.sahanbcs.models.sample;
 
 
 public class SampleRes {
