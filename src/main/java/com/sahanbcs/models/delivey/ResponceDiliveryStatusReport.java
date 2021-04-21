@@ -28,4 +28,12 @@ public class ResponceDiliveryStatusReport {
     public void setStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
     }
+
+    @Override
+    public String toString() {
+        return "ResponceDiliveryStatusReport{" +
+                "statusCode='" + statusCode + '\'' +
+                ", statusDetail='" + statusDetail + '\'' +
+                '}';
+    }
 }

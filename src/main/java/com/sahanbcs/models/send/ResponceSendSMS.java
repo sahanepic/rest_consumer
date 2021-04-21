@@ -59,4 +59,15 @@ public class ResponceSendSMS {
     public void setDestinationResponses(List<AddressEntry> destinationResponses) {
         this.destinationResponses = destinationResponses;
     }
+
+    @Override
+    public String toString() {
+        return "ResponceSendSMS{" +
+                "version='" + version + '\'' +
+                ", requestId='" + requestId + '\'' +
+                ", statusCode='" + statusCode + '\'' +
+                ", statusDetail='" + statusDetail + '\'' +
+                ", destinationResponses=" + destinationResponses +
+                '}';
+    }
 }

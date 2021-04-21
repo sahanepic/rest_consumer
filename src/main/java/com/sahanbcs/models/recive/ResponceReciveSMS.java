@@ -30,4 +30,12 @@ public class ResponceReciveSMS {
     public void setStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
     }
+
+    @Override
+    public String toString() {
+        return "ResponceReciveSMS{" +
+                "statusCode='" + statusCode + '\'' +
+                ", statusDetail='" + statusDetail + '\'' +
+                '}';
+    }
 }

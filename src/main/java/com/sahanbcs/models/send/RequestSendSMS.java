@@ -25,8 +25,10 @@ public class RequestSendSMS {
     private String message;
     private String sourceAddress;
 
-    private DiliveryStatus deliveryStatusRequest;
-    private Encoding encoding;
+//    private DiliveryStatus deliveryStatusRequest;
+//    private Encoding encoding;
+    private String deliveryStatusRequest;
+    private String encoding;
     private double chargingAmount;
 
 
@@ -35,17 +37,17 @@ public class RequestSendSMS {
 
     }
 
-    public RequestSendSMS(String applicationId, String password, String version, List<String> destinationAddresses, String message, String sourceAddress, DiliveryStatus deliveryStatusRequest, Encoding encoding, double chargingAmount) {
-        this.applicationId = applicationId;
-        this.password = password;
-        this.version = version;
-        this.destinationAddresses = destinationAddresses;
-        this.message = message;
-        this.sourceAddress = sourceAddress;
-        this.deliveryStatusRequest = deliveryStatusRequest;
-        this.encoding = encoding;
-        this.chargingAmount = chargingAmount;
-    }
+//    public RequestSendSMS(String applicationId, String password, String version, List<String> destinationAddresses, String message, String sourceAddress, DiliveryStatus deliveryStatusRequest, Encoding encoding, double chargingAmount) {
+//        this.applicationId = applicationId;
+//        this.password = password;
+//        this.version = version;
+//        this.destinationAddresses = destinationAddresses;
+//        this.message = message;
+//        this.sourceAddress = sourceAddress;
+//        this.deliveryStatusRequest = deliveryStatusRequest;
+//        this.encoding = encoding;
+//        this.chargingAmount = chargingAmount;
+//    }
 
 
     public List<String> getDestinationAddresses() {
@@ -97,7 +99,35 @@ public class RequestSendSMS {
         this.sourceAddress = sourceAddress;
     }
 
-//    public String getDiliveryStatus() {
+    public RequestSendSMS(String applicationId, String password, String version, List<String> destinationAddresses, String message, String sourceAddress, String deliveryStatusRequest, String encoding, double chargingAmount) {
+        this.applicationId = applicationId;
+        this.password = password;
+        this.version = version;
+        this.destinationAddresses = destinationAddresses;
+        this.message = message;
+        this.sourceAddress = sourceAddress;
+        this.deliveryStatusRequest = deliveryStatusRequest;
+        this.encoding = encoding;
+        this.chargingAmount = chargingAmount;
+    }
+
+    public String getDeliveryStatusRequest() {
+        return deliveryStatusRequest;
+    }
+
+    public void setDeliveryStatusRequest(String deliveryStatusRequest) {
+        this.deliveryStatusRequest = deliveryStatusRequest;
+    }
+
+    public String getEncoding() {
+        return encoding;
+    }
+
+    public void setEncoding(String encoding) {
+        this.encoding = encoding;
+    }
+
+    //    public String getDiliveryStatus() {
 //        return diliveryStatus;
 //    }
 //
@@ -113,21 +143,21 @@ public class RequestSendSMS {
 //        this.encoding = encoding;
 //    }
 
-    public DiliveryStatus getDeliveryStatusRequest() {
-        return deliveryStatusRequest;
-    }
-
-    public void setDeliveryStatusRequest(DiliveryStatus deliveryStatusRequest) {
-        this.deliveryStatusRequest = deliveryStatusRequest;
-    }
-
-    public Encoding getEncoding() {
-        return encoding;
-    }
-
-    public void setEncoding(Encoding encoding) {
-        this.encoding = encoding;
-    }
+//    public DiliveryStatus getDeliveryStatusRequest() {
+//        return deliveryStatusRequest;
+//    }
+//
+//    public void setDeliveryStatusRequest(DiliveryStatus deliveryStatusRequest) {
+//        this.deliveryStatusRequest = deliveryStatusRequest;
+//    }
+//
+//    public Encoding getEncoding() {
+//        return encoding;
+//    }
+//
+//    public void setEncoding(Encoding encoding) {
+//        this.encoding = encoding;
+//    }
 
     public double getChargingAmount() {
         return chargingAmount;
