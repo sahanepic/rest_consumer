@@ -3,15 +3,13 @@ package com.sahanbcs.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sahanbcs.models.Enomorators.RDiliveryStatus;
-import com.sahanbcs.models.delivey.RequestDiliveryStatusReport;
 import com.sahanbcs.models.delivey.ResponceDiliveryStatusReport;
-import com.sahanbcs.models.recive.RequestReciveSMS;
 import com.sahanbcs.models.recive.ResponceReciveSMS;
 import com.sahanbcs.models.sample.SampleReq;
 import com.sahanbcs.models.sample.SampleRes;
 import com.sahanbcs.models.send.ResponceSendSMS;
 import com.sahanbcs.service.Restservice;
+import com.sahanbcs.util.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -20,6 +18,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.time.Instant;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 
 @RestController
 public class RestConsume {
@@ -61,6 +63,7 @@ public class RestConsume {
 
     @GetMapping("/smssendrest")
     public ResponseEntity<ResponceSendSMS> smsSendRest() throws JsonProcessingException {
+        Logger.loginfo( RestConsume.class, "Sahan error"  );
 //        RestTemplate restTemplate = new RestTemplate();
 //        String url = "http://localhost:8080/smssend";
 //        List<String>  sse = new ArrayList<String>( );
